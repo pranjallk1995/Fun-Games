@@ -26,7 +26,7 @@ A collection of interactive games built with **Streamlit** and **Plotly**, inclu
 
 4. **Install dependencies**
 
-    `pip install -r requirements.txt`
+    `pip install -r src/requirements.txt`
 5. **Run the app**
 
     `streamlit run src/main.py`
