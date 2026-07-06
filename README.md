@@ -2,7 +2,7 @@
 
 A collection of interactive games built with **Streamlit** and **Plotly**, including:
 - 🌍 **World Map Game** – guess countries and see them highlighted on a live map.
-  ![alt text](src/wordl_map.png)
+  ![alt text](src/assets/wordl_map.png)
 - ⌨️ **Typing Master Game** – practice typing speed and accuracy with real-time keystroke checks.
     *work in progress*
 
