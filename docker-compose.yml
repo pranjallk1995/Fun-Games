@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  fun-games:
+    image: fun-games:latest
+    container_name: fun-games
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "16969:8501"
+    networks:
+      - game-network
+    volumes:
+      - ./src:/app
+    restart: unless-stopped
+    command: ["uv", "run", "python3", "-m", "streamlit", "run", "main.py", "--server.port=8501", "--server.address=0.0.0.0"]
+
+networks:
+  game-network:
+    name: game-network
+    driver: bridge
+    external: False
