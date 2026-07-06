@@ -1,0 +1,6 @@
+# World Map Game
+
+LAND_COLOR = "#cd5c5c"
+OCEAN_COLOR = "#0e1117"
+BORDER_COLOR = "#0e1117"
+GUESSED_COLOR = "#86f786"
