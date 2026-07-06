@@ -1,27 +1,14 @@
 import streamlit as st
 
+from games.typing_game import TypingGameApp
 from games.worldmap_game import WorldMapGameApp
 
-
-# class TypingGame:
-
-#     def __init__(self) -> None:
-#         pass
-
-# class TypingGameApp:
-
-#     def __init__(self) -> None:
-#         pass
-
-
-
-# --- Entry Point with Sidebar Buttons ---
 if __name__ == "__main__":
     st.sidebar.title(":material/sports_esports: Game Selector")
 
     # Define all available games here
     games = {
-        # "Typing Master": None,
+        "Typing Master": lambda: TypingGameApp().run(),
         "World Map": lambda: WorldMapGameApp().run(),
         # Add more games easily:
         # "Sudoku": sudoku_game
