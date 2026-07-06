@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   fun-games:
     image: fun-games:latest

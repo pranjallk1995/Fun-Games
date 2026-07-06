@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     # Define all available games here
     games = {
-        "Typing Master": None,
+        # "Typing Master": None,
         "World Map": lambda: WorldMapGameApp().run(),
         # Add more games easily:
         # "Sudoku": sudoku_game

@@ -83,10 +83,7 @@ class WorldMap:
         Args:
             guessed_iso_codes (list[str]): List of ISO3 codes guessed so far.
         """
-        if not hasattr(self, "_initialized") or not self._initialized:
-            self.update_map_properties()
-            self._initialized = True
-        self.world_map.data = []  
+        self.update_map_properties()
         for iso in guessed_iso_codes:
             self.highlight_country(iso)
         st.plotly_chart(self.world_map, width="stretch")
@@ -182,7 +179,7 @@ class WorldMapGameApp:
             ]
             df = pd.DataFrame(guessed_names[::-1])
             df.columns = ["Guessed Countries"]
-            st.dataframe(df, hide_index=True, width="stretch", height=145)
+            st.dataframe(df, hide_index=True, width="stretch", height=cfg.TABLE_HEIGHT)
 
     def run(self):
         """
