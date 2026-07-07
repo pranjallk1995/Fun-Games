@@ -173,7 +173,7 @@ class TypingGameApp:
         """
         Run the full app: title, options, input, and results.
         """
-        st.title(":material/keyboard: Typing Master Game")
+        st.title(":material/keyboard: AI Powered Typing Game")
         self.show_checkboxes()
         self.input_text()
         self.results()
