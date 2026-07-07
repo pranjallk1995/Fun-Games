@@ -4,6 +4,12 @@ from games.typing_game import TypingGameApp
 from games.worldmap_game import WorldMapGameApp
 
 if __name__ == "__main__":
+
+    st.set_page_config(
+        page_title="Games",
+        layout="wide"
+    )
+
     st.sidebar.title(":material/sports_esports: Game Selector")
 
     # Define all available games here
