@@ -136,7 +136,7 @@ class TypingGameApp:
 
             if len(user_input) >= len(st.session_state.typing_text) and not st.session_state.typing_completed:
                 wpm, accuracy, mistakes = self.calculate_metrics(user_input)
-                st.toast(f"WPM: {wpm:.1f} | Accuracy: {accuracy:.1f}% | Mistakes: {mistakes}", icon=":material/info:")
+                st.toast(f"WPM: {wpm:.1f} | Accuracy: {accuracy:.1f}%", icon=":material/info:")
 
                 if wpm <= 300:
                     st.session_state.typing_results.append(
