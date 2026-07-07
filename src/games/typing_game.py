@@ -27,6 +27,8 @@ class TypingGameApp:
             st.session_state.include_capitals = False
         if "include_punctuations" not in st.session_state:
             st.session_state.include_punctuations = False
+        if "typing_input" not in st.session_state:
+            st.session_state.typing_input = ""
 
     def show_checkboxes(self):
         """
@@ -74,14 +76,11 @@ class TypingGameApp:
             st.session_state.typing_challenge = self.generate_challenge()
 
         st.markdown(f"### Challenge: `{st.session_state.typing_challenge}`")
-
         user_input = st_keyup("Type the above string:", key="typing_input")
 
-        if user_input:
-            # Start timer when typing begins
+        if user_input and user_input != "":
             if st.session_state.typing_start_time is None:
                 st.session_state.typing_start_time = time.time()
-
             if len(user_input) >= len(st.session_state.typing_challenge):
                 elapsed = time.time() - st.session_state.typing_start_time
                 st.toast(f"Time: {elapsed:.1f}s", icon=":material/info:")
@@ -92,18 +91,13 @@ class TypingGameApp:
                 # Reset for next challenge
                 st.session_state.typing_challenge = self.generate_challenge()
                 st.session_state.typing_start_time = None
+                st.session_state.typing_input = ""
             else:
-                # Live character highlighting
-                highlighted = ""
-                for i, char in enumerate(user_input):
-                    if i < len(st.session_state.typing_challenge):
-                        if char == st.session_state.typing_challenge[i]:
-                            highlighted += f"<span style='color:green'>{char}</span>"
-                        else:
-                            highlighted += f"<span style='color:red'>{char}</span>"
-                    else:
-                        highlighted += f"<span style='color:gray'>{char}</span>"
-                st.markdown(f"**Live check:** {highlighted}", unsafe_allow_html=True)
+                checked_text = "".join(
+                    f":green[{char}]" if char == st.session_state.typing_challenge[i] else f":red[{char}]"
+                    for i, char in enumerate(user_input)
+                )
+                st.write(f"**Live check:** {checked_text}")
 
     def results(self):
         """
