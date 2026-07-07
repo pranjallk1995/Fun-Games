@@ -1,6 +1,6 @@
 # 🎮 Fun-Games
 
-[YOUTUBE_VIDEO_ID](https://youtu.be/5tdUu-Id3Ps)
+[YOUTUBE_VIDEO](https://youtu.be/5tdUu-Id3Ps)
 
 A collection of interactive games built with **Streamlit** and **Plotly**, including:
 - 🌍 **World Map Game** – guess countries and see them highlighted on a live map.
