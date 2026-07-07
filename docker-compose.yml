@@ -1,4 +1,5 @@
 services:
+
   fun-games:
     image: fun-games:latest
     container_name: fun-games
@@ -8,14 +9,14 @@ services:
     ports:
       - "16969:8501"
     networks:
-      - game-network
+      - ollama-network
     volumes:
       - ./src:/app
     restart: unless-stopped
     command: ["uv", "run", "python3", "-m", "streamlit", "run", "main.py", "--server.port=8501", "--server.address=0.0.0.0"]
 
 networks:
-  game-network:
-    name: game-network
+  ollama-network:
+    name: ollama-network
     driver: bridge
-    external: False
+    external: True
