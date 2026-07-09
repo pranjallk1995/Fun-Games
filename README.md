@@ -7,6 +7,8 @@ A collection of interactive games built with **Streamlit** and **Plotly**, inclu
   ![src/assets/wordl_map.png](https://github.com/pranjallk1995/Fun-Games/blob/0120aeb3cbfbc841a160e72b17c6db4932c9cd05/src/assets/world_map.png)
 - ⌨️ **Typing Master Game** – practice typing speed and accuracy with real-time keystroke checks.
 
+    [YOUTUBE_VIDEO](https://youtu.be/Z5IWfoChCCY)
+
     *work in progress*
 
 ---
