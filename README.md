@@ -11,6 +11,9 @@ A collection of interactive games built with **Streamlit** and **Plotly**, inclu
 
     *work in progress*
 
+    But if you really wanna run it. run the this image as a container: [Ollama](https://hub.docker.com/r/ollama/ollama) and run the llama3 server in it.
+    NOTE: make sure to put the ollama container in the same network as that of the fun-games service as mentioned in the docker network.
+
 ---
 
 ## ⚙️ Method 1: Local Virtual Environment
