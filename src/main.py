@@ -1,5 +1,6 @@
 import streamlit as st
 
+from games.flag_game import FlagGameApp
 from games.typing_game import TypingGameApp
 from games.worldmap_game import WorldMapGameApp
 
@@ -16,6 +17,7 @@ if __name__ == "__main__":
     games = {
         "Typing Master": lambda: TypingGameApp().run(),
         "World Map": lambda: WorldMapGameApp().run(),
+        "Flag Guessing": lambda: FlagGameApp().run(),
         # Add more games easily:
         # "Sudoku": sudoku_game
     }

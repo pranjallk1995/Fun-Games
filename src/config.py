@@ -1,3 +1,5 @@
+import os
+
 # World Map Game
 
 LAND_COLOR = "#cd5c5c"
@@ -9,3 +11,7 @@ TABLE_HEIGHT = 150
 # Typing Master Game
 
 RESULTS_HEIGHT = 200
+
+# Flag Guessing Game
+FLAG_DIR = os.path.join("assets", "flags")
+FLAG_JSON_FILE = "countries.json"
